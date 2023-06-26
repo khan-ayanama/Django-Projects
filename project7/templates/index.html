@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django Calculator</title>
+    <style>
+        label,
+        input,
+        select,
+        p,
+        button {
+            display: block;
+            margin: 0.3rem 1rem;
+            width: 50%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.3rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Django Calculator</h1>
+    <br><br>
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for="num1">Num1:</label>
+        <input type="text" value="" name="num1">
+        <br><br>
+        <p>Select Operator</p>
+        <select name="opr">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <br><br>
+        <label for="num2">Num2:</label>
+        <input type="text" value="" name="num2">
+        <br><br>
+        <button type="submit">Calculate</button>
+        <label for="output">Output:</label>
+        <input type="text" value="{{c}}">
+    </form>
+</body>
+
+</html>

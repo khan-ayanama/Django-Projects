@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1,
+h2 {
+    font-weight: 500;
+    word-spacing: 0.1em;
+}
+
+p {
+    font-size: 2rem;
+}
+
+
+/* ##################   utility classes ################### */
+
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.lg-heading {
+    font-size: 15rem;
+}
+
+.md-heading {
+    font-size: 7rem;
+}
+
+.sm-heading {
+    font-size: 2.2rem;
+}
+
+.bg-black {
+    background-color: black;
+}
+
+.bg-red {
+    background-color: rgb(115, 34, 0);
+}
+
+.bg-green {
+    background-color: rgb(81, 87, 2);
+}
+
+
+/* #################    header section styling  ################### */
+
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./images/image1.png);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 95vh;
+}
+
+.header-content {
+    background-color: #0000002d;
+    color: white;
+}
+
+
+/* class for highlight line in django */
+
+.active {
+    background-color: red;
+    color: white;
+    border-radius: 40%;
+}
+
+
+
+section.lower-head {
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    background-color: #000;
+    padding: 5em 0;
+}
+
+/* ###########  card section styling    ############ */
+
+
+.cards {
+    margin: 5em auto;
+}
+
+.card {
+    box-shadow: 0px 0 5px 0 #080000e5;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    transition: 0.2s ease-in-out;
+}
+
+
+.card-1,
+.card-2,
+.card-3 {
+    float: left;
+    width: 25%;
+    margin: 4%;
+    border-radius: 1rem;
+}
+
+
+.card-image img {
+    width: 100%;
+}
+
+.cards::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.card-heading,
+.card-content {
+    width: 90%;
+    margin: 1.5rem;
+}
+
+/* information styling */
+
+.contact,
+.about {
+    float: left;
+    width: 50%;
+    height: 80vh;
+    color: rgb(255, 255, 255);
+    padding: 4em 8em;
+}
+
+.info .contact h1 {
+    font-weight: 300;
+}
+
+.info::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+footer {
+    color: white;
+    padding: 8em;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.info p {
+    line-height: 1.4;
+    letter-spacing: 0.1em;
+    word-spacing: 0.1em;
+    margin: 2em 0;
+}
+
+/* ##########   navbar styling  ########## */
+
+
+@media(max-width:1080px) {
+    html {
+        font-size: 50%;
+    }
+
+    .card-1 {
+        float: left;
+        width: 40%;
+    }
+
+    .card-2 {
+        float: right;
+        width: 40%;
+    }
+
+    .card-3 {
+        width: 40%;
+        /* position: relative;
+        left: 25%; */
+    }
+
+}
+
+@media(max-width:768px) {
+    html {
+        font-size: 40%;
+    }
+
+
+
+    .card {
+        float: none;
+    }
+
+    .card-1,
+    .card-2,
+    .card-3 {
+        width: 60%;
+        margin: 5em auto;
+    }
+
+    .contact,
+    .about {
+        float: none;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width:500px) {
+    html {
+        font-size: 30%;
+    }
+
+    header {
+        height: 70vh;
+    }
+
+    .header-content {
+        position: absolute;
+        top: 10%;
+        left: 0%;
+        transform: rotate(10deg);
+        text-align: center;
+    }
+
+}

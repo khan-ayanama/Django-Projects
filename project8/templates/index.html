@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django Calculator</title>
+    <style>
+        label,
+        input,
+        select,
+        p,
+        button {
+            display: block;
+            margin: 0.3rem 1rem;
+            width: 50%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.3rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Even | Odd</h1>
+    <br><br>
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for="num">Enter the Number</label>
+        <input type="text" value="" name="num">
+        <br><br>
+
+        <button type="submit">Odd|Even</button>
+        <label for="output">Output:</label>
+        <input type="text" value="{{ans}}">
+    </form>
+</body>
+
+</html>

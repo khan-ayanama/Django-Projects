@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Landing Page</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <nav class="nav-bar"
+        style="display: flex;justify-content: space-between;align-items: center;padding: 2rem;color: white;background: linear-gradient(rgba(0,0,0,0.5),rgba(65, 3, 3, 0.9)) rgba(0, 0, 0, 0.171);opacity: 1;height: 7rem;">
+        <div class="logo sm-heading">AK</div>
+        <div class="menu-items">
+            <ul
+                style="display: flex;list-style-type: none;justify-content: space-around;padding: 5rem;font-size: 2rem;">
+                <li class="{% if request.path == '/' %} active {% endif %}" style="padding: 2rem;"><a href="/"
+                        style="text-decoration: none;color: white;">Home</a></li>
+                <li style="padding: 2rem;"><a href="/about-us" style="text-decoration: none;color: white;">About</a>
+                </li>
+                <!-- <li style="padding: 2rem;"><a href="/contact" style="text-decoration: none;color: white;">Contact</a> -->
+
+                <!-- Django url template tag second method -->
+                <li style="padding: 2rem;"><a href="{% url 'contact' %}"
+                        style="text-decoration: none;color: white;">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>

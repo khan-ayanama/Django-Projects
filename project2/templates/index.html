@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django template</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;color: white;background-color: black;padding: 5rem 0;">Hello welcome to {{title}}</h1>
+    <br><br>
+    {% for i in clist %}
+    <div>{{forloop.counter}} {{i}}</div>
+    {% endfor %}
+    <br>
+    <table border="1" cellpadding="10">
+        <thead>
+            <th>Name</th>
+            <th>Phone</th>
+        </thead>
+        <tbody>
+            {% for person in personDetail%}
+            <tr>
+                <td>{{person.name}}</td>
+                <td>{{person.Phone}}</td>
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+    <br><br>
+
+    {% if num|length > 0 %}
+    {% for i in num %}
+
+    {% if i|divisibleby:2 != 0 %}
+    <div>{{i}}</div>
+    {% endif %}
+    {%endfor%}
+
+    {% else %}
+    no data found
+
+    {% endif %}
+
+</body>
+
+</html>

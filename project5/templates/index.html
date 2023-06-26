@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.2rem;
+        }
+
+        .forms,
+        .form-element {
+            margin: 2rem 0;
+        }
+
+        .form-element,
+        button {
+            display: flex;
+            flex-direction: column;
+            margin: 2rem;
+        }
+
+        .form-element>input {
+            width: 70%;
+            padding: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1
+        style="text-align: center;background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))rgb(3, 3, 107);padding: 2rem;color: white;">
+        Welcome,
+        Douchebag
+    </h1>
+
+    <div class="forms">
+        <form action="{% url 'submitform' %}" method="post">
+            {% csrf_token %}
+            <div class="form-element">
+                <label for="">Value1</label>
+                <input type="text" name="num1" value="">
+            </div>
+            <div class="form-element">
+                <label for="">Value2</label>
+                <input type="text" name="num2" value="">
+            </div>
+            <button type="submit">Submit</button>
+            <div class="form-element">
+                <label for="">Output</label>
+                <!-- <input type="text" value="{{ouput}}" /> -->
+                <!-- <input type="text" value="{{output}}" /> -->
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
